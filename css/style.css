@@ -2136,4 +2136,9 @@ body.lock {
   .why__title {
     font-size: 24px;
   }
+
+  .form-body__title {
+    max-width: 305px;
+    margin: 0 auto;
+  }
 }
