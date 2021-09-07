@@ -1716,6 +1716,7 @@ body.lock {
 
 .line-bg {
   position: absolute;
+  z-index: 0;
   width: 100%;
   left: 50%;
   -webkit-transform: translate(-50%, 0);
