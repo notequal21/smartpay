@@ -69,6 +69,35 @@ if (animItems.length > 0) {
     }, 300);
 }
 
+if (document.documentElement.clientWidth > 992) { // disable script if resolution less than 1000px 
+
+  let bg01 = document.querySelector('.parallax__item-01');
+  window.addEventListener('mousemove', function(e) {
+      let x = e.clientX / window.innerWidth;
+      let y = e.clientY / window.innerHeight;  
+    bg01.style.transform = 'translate(-' + x * 16 + 'px, -' + y * 16 + 'px)';
+  });
+  let bg02 = document.querySelector('.parallax__item-02');
+  window.addEventListener('mousemove', function(e) {
+      let x = e.clientX / window.innerWidth;
+      let y = e.clientY / window.innerHeight;  
+    bg02.style.transform = 'translate(+' + x * 16 + 'px, -' + y * 16 + 'px)';
+  });
+  let bg03 = document.querySelector('.parallax__item-03');
+  window.addEventListener('mousemove', function(e) {
+      let x = e.clientX / window.innerWidth;
+      let y = e.clientY / window.innerHeight;  
+    bg03.style.transform = 'translate(+' + x * 16 + 'px, -' + y * 16 + 'px)';
+  });
+  let bg04 = document.querySelector('.parallax__item-04');
+  window.addEventListener('mousemove', function(e) {
+      let x = e.clientX / window.innerWidth;
+      let y = e.clientY / window.innerHeight;  
+    bg04.style.transform = 'translate(-' + x * 10 + 'px, -' + y * 10 + 'px)';
+  });
+
+}
+
 // ---- JQuery
 
 
