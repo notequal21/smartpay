@@ -66,10 +66,10 @@ if (animItems.length > 0) {
     
     setTimeout(() => {
         animOnScroll();
-    }, 300);
+    }, 00);
 }
 
-if (document.documentElement.clientWidth > 992) { // disable script if resolution less than 1000px 
+if (document.documentElement.clientWidth > 992 && document.querySelector('.wrapper').classList.contains('parallax')) { // disable script if resolution less than 1000px 
 
   let bg01 = document.querySelector('.parallax__item-01');
   window.addEventListener('mousemove', function(e) {
