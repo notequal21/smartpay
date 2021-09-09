@@ -31,44 +31,6 @@ const swiper = new Swiper('.swiper', {
     }
 });
 
-const animItems = document.querySelectorAll('._anim-items');
-
-if (animItems.length > 0) {
-    window.addEventListener('scroll', animOnScroll);
-    function animOnScroll() {
-        for (let index = 0; index < animItems.length; index++) {
-            const animItem = animItems[index];
-            const animItemHeight = animItem.offsetHeight;
-            const animItemOffset = offset(animItem).top;
-            const animStart = 4;
-
-            let animItemPoint = window.innerHeight - animItemHeight / animStart;
-            if (animItemHeight > window.innerHeight) {
-                animItemPoint = window.innerHeight - window.innerHeight / animStart;
-            }
-
-            if ((pageYOffset > animItemOffset - animItemPoint) && pageYOffset < (animItemOffset + animItemHeight)) {
-                animItem.classList.add('_active');
-            } else {
-                if (!animItem.classList.contains('_anim-no-hide')) {
-                    animItem.classList.remove('_active');
-                }
-            }
-        }
-    }
-
-    function offset(el) {
-        const rect = el.getBoundingClientRect(), 
-            scrollLeft = window.pageXOffset || document.documentElement.scrollLeft,
-            scrollTop = window.pageYOffset || document.documentElement.scrollTop;
-        return { top: rect.top + scrollTop, left: rect.left + scrollLeft }
-    }
-    
-    setTimeout(() => {
-        animOnScroll();
-    }, 00);
-}
-
 if (document.documentElement.clientWidth > 992 && document.querySelector('.wrapper').classList.contains('parallax')) { // disable script if resolution less than 1000px 
 
   let bg01 = document.querySelector('.parallax__item-01');
@@ -97,6 +59,55 @@ if (document.documentElement.clientWidth > 992 && document.querySelector('.wrapp
   });
 
 }
+"use strict"
+
+document.addEventListener('DOMContentLoaded', function () {
+    const form = document.querySelector('#form');
+    form.addEventListener('submit', formSend)
+
+    async function formSend(e) {
+        e.preventDefault();
+
+        let error = formValidate(form);
+    }
+
+
+    function formValidate(form) {
+        let error = 0;
+        let formReq = document.querySelectorAll('._req');
+
+        for (let index = 0; index < formReq.length; index++) {
+            const input = formReq[index];
+            formRemoveError(input);
+            
+            if (input.classList.contains('_email')) {
+                if (emailTest(input)) {
+                    formAddError(input);
+                    erorr++;
+                }
+            } else if(input.getAttribute("type" === "checkbox" && input.checked === false)) {
+                formAddError(input);
+                erorr++;
+            } else {
+                if (input.value === '') {
+                    formAddError(input);
+                    erorr++
+                }
+            }
+        }
+    }
+    function formAddError(input) {
+        input.parentElement.classList.add('_error');
+        input.classList.add('_error');
+    }
+    function formRemoveError(input) {
+        input.parentElement.classList.remove('_error');
+        input.classList.remove('_error');
+    }
+    function emailTest(input) {
+        return !/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,8})+$/.test(input.value);
+    }
+}); 
 
 // ---- JQuery
 
