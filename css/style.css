@@ -226,7 +226,7 @@ h6 {
 
 .outside-container {
   width: calc(100% - 120px);
-  background: #2F4078;
+  background: #2E3971;
   border-radius: 100px;
   margin: 0 60px;
   background-repeat: no-repeat;
@@ -653,7 +653,7 @@ h6 {
 
 .ourclients {
   margin: 100px 0 100px 0;
-  background-image: url("/img/ourclients/bg.svg");
+  background-image: url("../img/ourclients/bg.svg");
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
@@ -1005,7 +1005,7 @@ h6 {
 
 .ourclients {
   margin: 100px 0 100px 0;
-  background-image: url("/img/ourclients/bg.svg");
+  background-image: url("../img/ourclients/bg.svg");
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
@@ -1966,6 +1966,30 @@ h6 {
   color: #9C9CB1;
 }
 
+.form__name {
+  position: absolute;
+  top: 50%;
+  left: 55px;
+  -webkit-transform: translate(0, -50%);
+      -ms-transform: translate(0, -50%);
+          transform: translate(0, -50%);
+  font-family: Proxima Nova;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 16px;
+  line-height: 150%;
+  color: #9C9CB1;
+}
+
+.form__input {
+  padding: 28px 0 0 55px;
+  font-family: Proxima Nova;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 16px;
+  color: #261C2C;
+}
+
 @-webkit-keyframes ipad {
   0% {
     -webkit-transform: translate(0, -15px);
@@ -2257,6 +2281,7 @@ body.lock {
 
   .main-body__title {
     font-size: 28px;
+    text-align: center;
   }
 
   .main-body {

@@ -63,26 +63,28 @@ if (document.documentElement.clientWidth > 992 && document.querySelector('.wrapp
 AOS.init();
 
 
-let btnOpen = document.querySelectorAll('.services-content__item-btn');
-let popup = document.querySelector('.popup');
-let popupBg = document.querySelector('.popup-bg');
-
-let popupOpen = () => {
-    if (popup.classList.contains('active')) {
-        popup.classList.remove('active');
-    } else {
-        popup.classList.add('active');
+if (document.querySelector('.popup')) {
+    let btnOpen = document.querySelectorAll('.services-content__item-btn');
+    let popup = document.querySelector('.popup');
+    let popupBg = document.querySelector('.popup-bg');
+    
+    let popupOpen = () => {
+        if (popup.classList.contains('active')) {
+            popup.classList.remove('active');
+        } else {
+            popup.classList.add('active');
+        }
     }
-}
-let popupClose = () => {
-    if (popup.classList.contains('active')) {
-        popup.classList.remove('active');
+    let popupClose = () => {
+        if (popup.classList.contains('active')) {
+            popup.classList.remove('active');
+        }
     }
+    btnOpen.forEach((item) => {
+        item.addEventListener('click', popupOpen);
+    })
+    popupBg.addEventListener('click', popupClose);
 }
-btnOpen.forEach((item) => {
-    item.addEventListener('click', popupOpen);
-})
-popupBg.addEventListener('click', popupClose);
 
 // ---- JQuery
 
