@@ -1867,6 +1867,12 @@ h6 {
 }
 
 .popup {
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+  -webkit-transition: all .4s ease;
+  -o-transition: all .4s ease;
+  transition: all .4s ease;
   position: fixed;
   z-index: 500;
   top: 0;
@@ -1874,6 +1880,20 @@ h6 {
   width: 100vw;
   height: 100vh;
   background: rgba(10, 15, 31, 0.9);
+}
+
+.popup.active {
+  opacity: 1;
+  visibility: visible;
+  pointer-events: all;
+}
+
+.popup-bg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: inherit;
+  height: inherit;
 }
 
 .popup-body {
@@ -1944,6 +1964,88 @@ h6 {
   font-size: 12px;
   line-height: 150%;
   color: #9C9CB1;
+}
+
+@-webkit-keyframes ipad {
+  0% {
+    -webkit-transform: translate(0, -15px);
+            transform: translate(0, -15px);
+  }
+
+  100% {
+    -webkit-transform: translate(0, 15px);
+            transform: translate(0, 15px);
+  }
+}
+
+@keyframes ipad {
+  0% {
+    -webkit-transform: translate(0, -15px);
+            transform: translate(0, -15px);
+  }
+
+  100% {
+    -webkit-transform: translate(0, 15px);
+            transform: translate(0, 15px);
+  }
+}
+
+@-webkit-keyframes iphone {
+  0% {
+    -webkit-transform: translate(0, -15px);
+            transform: translate(0, -15px);
+  }
+
+  100% {
+    -webkit-transform: translate(0, 15px);
+            transform: translate(0, 15px);
+  }
+}
+
+@keyframes iphone {
+  0% {
+    -webkit-transform: translate(0, -15px);
+            transform: translate(0, -15px);
+  }
+
+  100% {
+    -webkit-transform: translate(0, 15px);
+            transform: translate(0, 15px);
+  }
+}
+
+.parallax__item-01 {
+  position: absolute;
+  z-index: 600;
+  top: 20px;
+  left: 46%;
+  -webkit-transform: translate(-50%, 0);
+      -ms-transform: translate(-50%, 0);
+          transform: translate(-50%, 0);
+}
+
+.parallax__item-02 {
+  position: absolute;
+  z-index: 600;
+  top: 652px;
+  left: 30%;
+  -webkit-transform: translate(-50%, 0);
+      -ms-transform: translate(-50%, 0);
+          transform: translate(-50%, 0);
+}
+
+.parallax__item-03 {
+  position: absolute;
+  z-index: 600;
+  top: -84px;
+  left: 320px;
+}
+
+.parallax__item-04 {
+  position: absolute;
+  z-index: 600;
+  top: -40px;
+  left: 780px;
 }
 
 body {
