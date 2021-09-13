@@ -1565,6 +1565,7 @@ h6 {
 .contact-form__item textarea {
   resize: none;
   width: 100%;
+  height: 130px;
   background: #F6F6FB;
   border: 1px solid #E8E8F2;
   -webkit-box-sizing: border-box;
@@ -1645,6 +1646,15 @@ h6 {
   left: -10px;
 }
 
+.map {
+  margin: 100px 0 100px 0;
+}
+
+.map iframe {
+  width: 100%;
+  height: 500px;
+}
+
 .services {
   height: 400px;
   top: -77px;
@@ -1708,10 +1718,18 @@ h6 {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
+  -webkit-transition: all .4s ease;
+  -o-transition: all .4s ease;
+  transition: all .4s ease;
 }
 
 .services-content__item:last-child {
   margin: 109px auto 0 0;
+}
+
+.services-content__item:hover {
+  -webkit-box-shadow: 0px 20px 30px rgba(175, 182, 207, 0.15);
+          box-shadow: 0px 20px 30px rgba(175, 182, 207, 0.15);
 }
 
 .services-content__item:hover .services-content__item-ico img {
@@ -1860,6 +1878,10 @@ h6 {
 
 .policy__text {
   margin: 50px 0 0 0;
+}
+
+.policy__text b {
+  color: #000;
 }
 
 .policy__text li {
@@ -2447,6 +2469,7 @@ body.lock {
         -ms-flex: 1 1 100%;
             flex: 1 1 100%;
     width: 100%;
+    margin: 0 0 50px 0;
   }
 
   .contact-col:nth-child(2) {
@@ -2467,8 +2490,8 @@ body.lock {
   }
 
   .contact-col__item-ico img {
-    width: 100%;
-    height: 100%;
+    width: 60px;
+    height: 60px;
     -o-object-fit: contain;
        object-fit: contain;
     -o-object-position: center;
@@ -2485,6 +2508,16 @@ body.lock {
 
   .contact-form {
     border-radius: 0;
+  }
+
+  .contact-form .circle:nth-child(1) {
+    bottom: -230px;
+    left: -300px;
+  }
+
+  .contact-form .circle:nth-child(2) {
+    bottom: -80px;
+    right: -660px;
   }
 
   .services-list {
@@ -2535,6 +2568,26 @@ body.lock {
 
   .parallax__item-04 {
     display: none;
+  }
+
+  .line-bg {
+    display: none;
+  }
+
+  .ourclients__title {
+    font-size: 24px;
+  }
+
+  .about-col__title {
+    font-size: 24px;
+  }
+
+  .map {
+    display: none;
+  }
+
+  .contact__title {
+    font-size: 24px;
   }
 }
 
@@ -2595,5 +2648,15 @@ body.lock {
   .form-body__title {
     max-width: 305px;
     margin: 0 auto;
+  }
+
+  .card-body {
+    padding: 90px 30px 30px;
+  }
+
+  .contact-form .circle__xxx {
+    z-index: 0;
+    top: -155px;
+    left: -60px;
   }
 }
