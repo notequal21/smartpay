@@ -2563,7 +2563,7 @@ body.lock {
 
   .services__title {
     font-size: 24px;
-    margin: 100px 0 0 0;
+    margin: 80px 0 0 3px;
   }
 
   .services-body {
@@ -2627,11 +2627,12 @@ body.lock {
   }
 
   .ourclients-card .card__title {
-    font-size: 16px;
+    font-size: 18px;
+    max-width: 278px;
   }
 
   .ourclients-body {
-    margin: 112px 0 0 0;
+    margin: 100px 0 0 0;
   }
 
   .ourclients {
@@ -2640,6 +2641,11 @@ body.lock {
 
   .form {
     background-position: 100% 1000%;
+  }
+
+  .reviews .ourclients-card .card__title {
+    font-size: 16px;
+    max-width: 100%;
   }
 }
 
@@ -2703,7 +2709,7 @@ body.lock {
   }
 
   .card-body {
-    padding: 90px 30px 30px;
+    padding: 80px 30px 30px;
   }
 
   .contact-form .circle__xxx {
